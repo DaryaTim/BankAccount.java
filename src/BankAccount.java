@@ -2,9 +2,11 @@ public class BankAccount {
     double account;
     double sum;
 
+
     public BankAccount(double account, double sum) {
         this.account = account;
         this.sum = sum;
+
     }
 
     public double getAccount() {
@@ -22,6 +24,8 @@ public class BankAccount {
     public void setSum(double sum) {
         this.sum = sum;
     }
+
+
 
     public void put(double putMoney) {
         if (putMoney <= 0) {

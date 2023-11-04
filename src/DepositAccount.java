@@ -5,7 +5,7 @@ public class DepositAccount extends BankAccount {
     LocalDate lastIncome = LocalDate.now();
     public DepositAccount(double account, double sum) {
         super(account, sum);
-
+    }
 
     public void put(double putSum, String data) {
         super.put (putSum);
@@ -13,7 +13,9 @@ public class DepositAccount extends BankAccount {
         System.out.println(lastIncome);
         }
 
-    public void put (double getSum, String data) {
+    public void get (double getSum, String data) {
+        LocalDate lastIncome = LocalDate.parse(data);
+
         Period between = Period.between(lastIncome, LocalDate.now());
 
         if (!between.isNegative()) {
